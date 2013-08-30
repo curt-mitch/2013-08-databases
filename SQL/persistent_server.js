@@ -27,5 +27,11 @@ var server = http.createServer(handler.handleRequest);
 console.log("Listening on http://" + ip + ":" + port);
 server.listen(port, ip);
 
+dbConnection.query('SELECT 1 + 4 AS solution', function(err, rows, fields) {
+  if (err) throw err;
+
+  console.log('The solution is: ', rows[0].solution);
+});
+
 
 dbConnection.end();
