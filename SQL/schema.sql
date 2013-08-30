@@ -3,7 +3,9 @@ CREATE DATABASE chat;
 USE chat;
 
 CREATE TABLE messages (
- /* Describe your table here.*/
+  usernames VARCHAR(12),
+  messages VARCHAR(140),
+  createdAt DATE
 );
 
 /* You can also create more tables, if you need them... */
